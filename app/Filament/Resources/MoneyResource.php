@@ -78,6 +78,7 @@ class MoneyResource extends Resource
             ->modifyQueryUsing(function (Builder $query) {
                 $query->where('user_id', auth()->user()->id);
             })
+            ->defaultSort('created_at', 'desc')
             ->filters([
                //
             ])

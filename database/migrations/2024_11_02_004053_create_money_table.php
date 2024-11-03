@@ -11,11 +11,11 @@ return new class () extends Migration {
     public function up(): void
     {
         Schema::create('money', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->string('title');
             $table->enum('type', ['Pemasukan', 'Pengeluaran']);
             $table->integer('amount');
-            $table->foreignId('user_id');
+            $table->foreignUuid('user_id');
             $table->timestamps();
         });
     }
