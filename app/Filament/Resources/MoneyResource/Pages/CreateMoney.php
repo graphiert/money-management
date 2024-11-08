@@ -15,4 +15,9 @@ class CreateMoney extends CreateRecord
         $data['user_id'] = auth()->user()->id;
         return $data;
     }
+
+    protected function getRedirectUrl(): string
+    {
+        return static::getResource()::getUrl('index');
+    }
 }
