@@ -41,6 +41,7 @@ class MoneyResource extends Resource
                 Forms\Components\TextInput::make('amount')
                     ->required()
                     ->numeric(),
+                Forms\Components\Textarea::make('description'),
             ]);
     }
 
