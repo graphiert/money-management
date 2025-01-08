@@ -13,6 +13,7 @@ return new class () extends Migration {
         Schema::create('money', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('title');
+            $table->text('description')->nullable();
             $table->enum('type', ['Pemasukan', 'Pengeluaran']);
             $table->integer('amount');
             $table->foreignUuid('user_id');

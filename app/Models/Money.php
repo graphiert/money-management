@@ -11,7 +11,7 @@ class Money extends Model
 {
     use HasUuids;
 
-    protected $fillable = ['title', 'type', 'amount', 'user_id'];
+    protected $fillable = ['title', 'description', 'type', 'amount', 'user_id'];
 
     public function user(): BelongsTo
     {
