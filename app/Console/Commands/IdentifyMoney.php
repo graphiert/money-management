@@ -30,7 +30,7 @@ class IdentifyMoney extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Show, edit or delete money.';
 
     /**
      * Execute the console command.
